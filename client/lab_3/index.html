@@ -22,43 +22,23 @@
         </div>
         <div class="right_section box">
           <h2>Image Carousel</h2>
-          <div class="grid">
-            <img
-              id="slide_1"
-              src="images/dog1.jpg"
-              alt="An image of a dog"
-            />
-            <img
-              id="slide_2"
-              src="images/dog2.jpg"
-              alt="Another image of a dog"
-            />
-            <img
-              id="slide_3"
-              src="images/dog3.jpg"
-              alt="A third image of a dog"
-            />
-            <img
-              id="slide_4"
-              src="images/dog4.jpg"
-              alt="Fourth dog"
-            />
+          <div class="carousel">
+            <button class="prev">prev</button>
+            <div class="slides">
+              <div class="carousel_item visible"><img id="slide_1" src="images/dog1.jpg" alt="An image of a dog"/></div>
+              <div class="carousel_item hidden"><img id="slide_2" src="images/dog2.jpg" alt="An image of a dog"/></div>
+              <div class="carousel_item hidden"><img id="slide_3" src="images/dog3.jpg" alt="An image of a dog"/></div>
+              <div class="carousel_item hidden"><img id="slide_4" src="images/dog4.jpg" alt="An image of a dog"/></div>
+            </div>
+            <button class="next">next</button>
           </div>
           <div class="box">
-              The first image is a jpg, the second is a gif, the third is a png,
-              and the last is an svg.
+            These are pictures of dogs.
           </div>
         </div>
       </div>
       <footer class="footer">
-        RYANETUNKEL
-        <a
-          class="a"
-          href="http://github.com/ryanetunkel"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Ryan E Tunkel On GitHub</a
-        >
+        RYANETUNKEL <a href="http://github.com/ryanetunkel">Ryan E Tunkel On GitHub</a>
       </footer>
     </div>
     <script src="script.js"></script>
