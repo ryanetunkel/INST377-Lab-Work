@@ -39,7 +39,7 @@ a {
   text-decoration: none;
 }
 
-h2 {
+h2, h3 {
   margin:0;
   padding:0;
   padding-bottom:1.5rem;
@@ -68,8 +68,8 @@ form {
 .container {
   margin: 0 20px;
   display: flex;
-  justify-content: space-evenly;
-  align-items: start;
+  justify-content: center;
+  align-items: flex-start;
   flex:1;
 }
 
@@ -92,7 +92,7 @@ form {
   /* this will push other blocks out of the way */
 
   /* colors */
-  background-color: #ffe08a;
+  background-color: #f1d6b8;
   color: #4a4a4a;
 
   /* shapes */
@@ -128,18 +128,20 @@ form {
 }
 
 .left_section {
-  background-color: rgba(0, 139, 139, 0.8);
+  background-color: rgba(161, 130, 118, 0.8);
   flex: 0 1 auto;
   margin: 1rem;
   padding: 1.5rem;
 }
 
 .right_section {
-  background-color: rgba(255, 224, 138, 0.7);
+  background-color: rgba(185, 210, 177, 0.702);
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
-  max-width: 450px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 /*
@@ -151,13 +153,15 @@ form {
 .footer {
   flex-shrink: 0;
   padding: 1rem;
-  background-color: rgba(0, 139, 139, 0.8);
+  background-color: rgba(241, 214, 184, 0.8);
   font-size: 1.2rem;
   font-weight: 600;
+  display: flex;
+  align-items: flex-end;
 }
 
 .footer a {
-  color: rgba(255, 224, 138, 1);
+  color: rgb(161, 130, 118);
   text-decoration: underline;
 }
 
@@ -170,7 +174,7 @@ form {
   /* Hue, saturation, luminosity, alpha */
   background-color: hsla(0, 0%, 90%, 0.15);
   /* red, green, blue, alpha */
-  color: rgb(246, 169, 93);
+  color: #fbacbe;
   text-decoration: none;
 }
 
@@ -264,7 +268,7 @@ div.carousel {
 
 .prev:hover,
 .next:hover {
-  background-color: rgb(193, 116, 1);
+  background-color: #c17401;
   /* Pick a good background colour for your hover pseudoclass */
 }
 
@@ -296,12 +300,29 @@ form input {
     margin-bottom: 0.5rem;
   }
 
-/* How To Write A Media Query For Small Screens */
-
-@media only screen and (max-width: 736px){
+  @media only screen and (max-width: 736px) {
     /* Rules in here will only apply when a screen is the correct size */
     /* check it out by using your developer tools to shrink your screen-size */
-    .container {
-      background-color: rgba(204, 8, 162, 0.65);
-    }
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box {
+    width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+    align-items: flex-start;
+  }
+
+  .right_section {
+    flex: 1 1 auto;
+    justify-content: start;
+  }
+
+  .left_section {
+    flex: 1 1 auto;
+  }
 }
