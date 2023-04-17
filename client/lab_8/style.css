@@ -56,7 +56,6 @@ form {
   - note that the period vanishes there!
 */
 
-
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -80,7 +79,6 @@ form {
   padding-bottom: 1.5rem;
 }
 
-
 /*
   This rule implies that the H1 tag lives within another HTML tag
   It "inherits" some rules from the above
@@ -101,11 +99,9 @@ form {
   padding: 1.25rem;
   margin:0; /* removing the margin on h1 tags means the header pins to the top if we move */
 
-
   /* box-shadows are fancy */
   box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
 }
-
 
 /*
   Rules can be combined on a block to apply the 'cascade' in order
@@ -115,6 +111,12 @@ form {
   Rules may combine in unexpected ways - remember that the LAST thing written in this file will have "priority"
   And will be what displays in your client
 */
+#map {
+  width: 400px;
+  height: 380px;
+  margin-bottom: 1rem;
+}
+
 
 .box {
   background-color: rgba(239, 239, 239, 0.40);
